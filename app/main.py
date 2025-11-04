@@ -21,6 +21,14 @@ class MainApp(App):
             [".", "0", "C", "+"],
         ]
         
+        for row in buttons:
+            h_layout = BoxLayout()
+            for label in row:
+                button = Button(text = label, font_size = 32)
+                button.bind(on_press = self.on_button_press)
+                h_layout.add_widget(button)
+            main_layout.add_widget(h_layout)
+        
 if __name__ == "__main__":
     app = MainApp()
     app.run()

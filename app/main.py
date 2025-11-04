@@ -29,6 +29,8 @@ class MainApp(App):
                 button.bind(on_press = self.on_button_press)
                 h_layout.add_widget(button)
             main_layout.add_widget(h_layout)
+        equals_button = Button(text = "=", font_size = 32, background_color = "orange",
+                               pos_hint = {"center_x": 0.5, "center_y": 0.5})
         
 if __name__ == "__main__":
     app = MainApp()
